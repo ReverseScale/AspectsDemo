@@ -7,13 +7,13 @@
 
 ![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective-C-blue.svg) ![](https://img.shields.io/badge/download-4.9MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
 
-
+----
 ### 🤖 要求
 
 * iOS 8.0+
 * Xcode 7.0+
 
-
+----
 ### 🎨 测试 UI 什么样子？
 
 | 名称 |1.展示页 |2.展示页 |3.展示页 |
@@ -21,7 +21,7 @@
 | 截图 | ![](http://og1yl0w9z.bkt.clouddn.com/18-1-15/840928.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-1-15/49794754.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-1-15/6455284.jpg) | 
 | 描述 | 展示列表 | 拦截系统事件 | 自定义拦截 | 
 
-
+----
 ### 🎯 安装方法
 
 #### 安装
@@ -35,7 +35,7 @@ use_frameworks!
 pod "Aspects"
 ```
 
-
+----
 ### 🛠 配置
 
 #### 系统级拦截
@@ -97,11 +97,13 @@ pod "Aspects"
 
 ```
 
+----
 ### 📝 深入学习
 
-Aspects:https://github.com/steipete/Aspects
+Aspects: https://github.com/steipete/Aspects
 
 
+----
 ### ⚖ 协议
 
 ```
@@ -128,6 +130,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+----
 ### 😬 联系
 
 * 微信 : WhatsXie
