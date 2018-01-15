@@ -3,7 +3,7 @@
 
 > 统计打点是 App 开发里很重要的一个环节，App 的运行状态、改版后的效果、用户的各种行为等都需要打点，所以需要一种更好的方式来做这件事，这就是使用 AOP(Aspect-Oriented-Programming)，翻译过来就是「面向切面编程」
 
-![](http://og1yl0w9z.bkt.clouddn.com/17-12-18/79869793.jpg)
+![](http://og1yl0w9z.bkt.clouddn.com/18-1-15/34837673.jpg)
 
 ![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg) ![](https://img.shields.io/badge/download-4.9MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
 
