@@ -1,11 +1,151 @@
 # AspectsDemo
+
+> AOP is a hot topic in recent years, the main purpose is to replace the previous base class ideas to make up for the coupling problem of the base class.
+
+![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg) ![](https://img.shields.io/badge/download-4.9MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
+
+For example, statistics management is a very important part in the development of App. The running status of App, the effect of revision, various behaviors of users, etc. need to be managed. Therefore, a better way is needed to do this. Using AOP (Aspect-Oriented-Programming), translation is "face to face programming".
+
+![](https://user-gold-cdn.xitu.io/2018/2/7/1616f7b202301e25)
+
+----
+### 🤖 Requirements
+
+* iOS 8.0+
+* Xcode 7.0+
+
+----
+### 🎨 Why test the UI?
+
+| 1.Presentation page | 2.Presentation page | 3.Presentation page |
+| ------------- | ------------- | ------------- | 
+| ![](https://user-gold-cdn.xitu.io/2018/2/7/1616f7b2032a357e) | ![](https://user-gold-cdn.xitu.io/2018/2/7/1616f7b2024d15de) | ![](https://user-gold-cdn.xitu.io/2018/2/7/1616f7b1fdc95bc1) | 
+| Display List | Intercept System Events | Custom Interception |
+
+----
+### 🎯 Installation
+
+#### Install
+
+In * iOS *, you need to add in Podfile.
+
+```
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+
+pod "Aspects"
+```
+
+----
+### 🛠 Configuration
+
+#### System-level interception
+
+Intercept system-level events such as viewWillAppear, etc.
+
+```objc
+#import <Aspects.h>
+#import <objc/runtime.h>
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    [UIViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated) {
+        NSLog(@"View Controller %@ will appear animated: %tu", aspectInfo.instance, animated);
+    } error:NULL];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"System View Controller will appear");
+}
+```
+
+#### Custom interception
+
+Intercepted custom events, such as the operation of the class
+
+```objc
+// Cat.h Class
+@interface Cat: NSObject
++ (void)classFee;
+@end
+
+// Cat.m Class
+@implementation Cat
++ (void)classFee {
+    NSLog(@"Miao~");
+}
+@end
+
+// implement method
+#import "Cat.h"
+#import <Aspects.h>
+#import <objc/runtime.h>
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    Class catMetal = objc_getMetaClass(NSStringFromClass(Cat.class).UTF8String);
+    
+    [catMetal aspect_hookSelector:@selector(classFee) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo) {
+        NSLog(@"Miao~,I am angry~");
+    } error:NULL];
+    
+    [Cat classFee];
+}
+
+```
+
+----
+### 📝 Submission
+
+Aspects: https://github.com/steipete/Aspects
+
+----
+### ⚖ License
+
+```
+MIT License
+
+Copyright (c) 2017 ReverseScale
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+----
+### 😬 Contributions
+
+* WeChat : WhatsXie
+* Email : ReverseScale@iCloud.com
+* Blog: https://reversescale.github.io
+
+---
+# 中文说明
+
 基于 Aspects 简单展示 AOP（面向切面）编程 🤖
 
 > 统计打点是 App 开发里很重要的一个环节，App 的运行状态、改版后的效果、用户的各种行为等都需要打点，所以需要一种更好的方式来做这件事，这就是使用 AOP(Aspect-Oriented-Programming)，翻译过来就是「面向切面编程」
 
 ![](http://og1yl0w9z.bkt.clouddn.com/18-1-15/34837673.jpg)
-
-![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg) ![](https://img.shields.io/badge/download-4.9MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
 
 ----
 ### 🤖 要求
