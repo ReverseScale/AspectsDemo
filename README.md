@@ -1,8 +1,10 @@
 # AspectsDemo
 
+![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg) ![](https://img.shields.io/badge/download-4.9MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
+
 > AOP is a hot topic in recent years, the main purpose is to replace the previous base class ideas to make up for the coupling problem of the base class.
 
-![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg) ![](https://img.shields.io/badge/download-4.9MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
+[EN](#Requirements) | [中文](#中文说明)
 
 For example, statistics management is a very important part in the development of App. The running status of App, the effect of revision, various behaviors of users, etc. need to be managed. Therefore, a better way is needed to do this. Using AOP (Aspect-Oriented-Programming), translation is "face to face programming".
 
