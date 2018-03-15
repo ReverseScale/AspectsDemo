@@ -25,12 +25,11 @@
         NSLog(@"View Controller %@ will appear animated: %tu", aspectInfo.instance, animated);
     } error:NULL];
 }
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     NSLog(@"System View Controller will appear");
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -643,7 +643,6 @@
 			baseConfigurationReference = 38B1ADE2A3B7099DE21542B7 /* Pods-AspectsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DHQ5WDNWKL;
 				INFOPLIST_FILE = AspectsDemo/Info.plist;
@@ -659,7 +658,6 @@
 			baseConfigurationReference = 4F908EF75B8FD760F8245BBE /* Pods-AspectsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DHQ5WDNWKL;
 				INFOPLIST_FILE = AspectsDemo/Info.plist;
