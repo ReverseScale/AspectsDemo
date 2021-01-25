@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Cat.h"
+#import "TestView.h"
 #import <Aspects.h>
 #import <objc/runtime.h>
 
@@ -22,8 +23,13 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     [UIViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated) {
-        NSLog(@"View Controller %@ will appear animated: %tu", aspectInfo.instance, animated);
+        NSLog(@"View Controller %@ will appear animated: %d", aspectInfo.instance, animated);
     } error:NULL];
+    
+    TestView *customView = [[TestView alloc] init];
+    customView.frame = CGRectMake(100, 100, self.view.bounds.size.width - 200, 150);
+    customView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:customView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -35,6 +41,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

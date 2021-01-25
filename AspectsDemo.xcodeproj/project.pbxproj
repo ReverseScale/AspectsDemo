@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2221227D25BEC8BB00CD1AC4 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2221227C25BEC8BB00CD1AC4 /* TestView.m */; };
 		347765061FF1FEBA0061A221 /* CatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765051FF1FEBA0061A221 /* CatViewController.m */; };
 		347765081FF2007B0061A221 /* github_miao.png in Resources */ = {isa = PBXBuildFile; fileRef = 347765071FF2007B0061A221 /* github_miao.png */; };
 		34E72B911FECF7F100AA0E85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E72B901FECF7F100AA0E85 /* AppDelegate.m */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2221227B25BEC8BB00CD1AC4 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		2221227C25BEC8BB00CD1AC4 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		25D52A80E08112163CC16510 /* Pods-AspectsDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AspectsDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AspectsDemoTests/Pods-AspectsDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		347765041FF1FEBA0061A221 /* CatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatViewController.h; sourceTree = "<group>"; };
 		347765051FF1FEBA0061A221 /* CatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CatViewController.m; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				34E72B901FECF7F100AA0E85 /* AppDelegate.m */,
 				34E72B921FECF7F100AA0E85 /* ViewController.h */,
 				34E72B931FECF7F100AA0E85 /* ViewController.m */,
+				2221227B25BEC8BB00CD1AC4 /* TestView.h */,
+				2221227C25BEC8BB00CD1AC4 /* TestView.m */,
 				347765041FF1FEBA0061A221 /* CatViewController.h */,
 				347765051FF1FEBA0061A221 /* CatViewController.m */,
 				34E72BC11FECF94500AA0E85 /* Cat.h */,
@@ -196,8 +201,6 @@
 				34E72B881FECF7F100AA0E85 /* Sources */,
 				34E72B891FECF7F100AA0E85 /* Frameworks */,
 				34E72B8A1FECF7F100AA0E85 /* Resources */,
-				16D75A5BB0B37800DBA34852 /* [CP] Embed Pods Frameworks */,
-				5E7B45DD4C5F69831FB2E032 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,8 +219,6 @@
 				34E72BA01FECF7F200AA0E85 /* Sources */,
 				34E72BA11FECF7F200AA0E85 /* Frameworks */,
 				34E72BA21FECF7F200AA0E85 /* Resources */,
-				2B57D93534979DF0BBA156B2 /* [CP] Embed Pods Frameworks */,
-				0D40C1B2897D1A0E56E89AFC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,8 +238,6 @@
 				34E72BAB1FECF7F200AA0E85 /* Sources */,
 				34E72BAC1FECF7F200AA0E85 /* Frameworks */,
 				34E72BAD1FECF7F200AA0E85 /* Resources */,
-				38366658AF329AD939B56365 /* [CP] Embed Pods Frameworks */,
-				7B80193A8038B9DCA8C02BF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,36 +323,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D40C1B2897D1A0E56E89AFC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AspectsDemoTests/Pods-AspectsDemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		16D75A5BB0B37800DBA34852 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AspectsDemo/Pods-AspectsDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2601A4E8E30C169E5A1EB500 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,36 +339,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2B57D93534979DF0BBA156B2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AspectsDemoTests/Pods-AspectsDemoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		38366658AF329AD939B56365 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AspectsDemoUITests/Pods-AspectsDemoUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4EB5E3556D6D486C143A5B75 /* [CP] Check Pods Manifest.lock */ = {
@@ -420,21 +359,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5E7B45DD4C5F69831FB2E032 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AspectsDemo/Pods-AspectsDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		663404564F4AE1332FB6A5D4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -453,21 +377,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B80193A8038B9DCA8C02BF3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AspectsDemoUITests/Pods-AspectsDemoUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -479,6 +388,7 @@
 				34E72B941FECF7F100AA0E85 /* ViewController.m in Sources */,
 				34E72B9F1FECF7F100AA0E85 /* main.m in Sources */,
 				347765061FF1FEBA0061A221 /* CatViewController.m in Sources */,
+				2221227D25BEC8BB00CD1AC4 /* TestView.m in Sources */,
 				34E72B911FECF7F100AA0E85 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,7 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				DEVELOPMENT_TEAM = KLLPP6867R;
 				INFOPLIST_FILE = AspectsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = R.S.AspectsDemo;
@@ -674,7 +584,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				DEVELOPMENT_TEAM = KLLPP6867R;
 				INFOPLIST_FILE = AspectsDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = R.S.AspectsDemoTests;
@@ -705,7 +615,7 @@
 			baseConfigurationReference = 896633DEFB9EA31D37C64662 /* Pods-AspectsDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				DEVELOPMENT_TEAM = KLLPP6867R;
 				INFOPLIST_FILE = AspectsDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = R.S.AspectsDemoUITests;
